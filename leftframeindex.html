@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('america.png','africaaaa.jpg','africaa.png','africe.png','americaaaa.jpg','americaaa.jpg','ameee.jpg','antartiiiii.jpeg','antartidaaaaaa.png','assssi.jpg','assia.jpg','euroo.jpg','euro.png','oceania.png','oceaniaas.png')">
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><a href="africaa.html" target="_top" onclick="MM_nbGroup('down','group1','africa','africaaaa.jpg',1)" onmouseover="MM_nbGroup('over','africa','africaa.png','africe.png',1)" onmouseout="MM_nbGroup('out')"><img src="africa.jpg" alt="Africa" name="africa" width="66" height="53" border="0" id="africa" onload="" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="oceaniaa.html" target="_top" onclick="MM_nbGroup('down','group1','oceee','oceania.png',1)" onmouseover="MM_nbGroup('over','oceee','oceaniaas.png','',1)" onmouseout="MM_nbGroup('out')"><img src="oceee.jpg" alt="oceania" name="oceee" width="65" height="45" border="0" onload="" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="europaa.html" target="_top" onClick="MM_nbGroup('down','group1','europa','euroo.jpg',1)" onMouseOver="MM_nbGroup('over','europa','euro.png','',1)" onMouseOut="MM_nbGroup('out')"><img src="europa.png" alt="europa" name="europa" width="70" height="44" border="0" onLoad="" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="asiaa.html" target="_top" onClick="MM_nbGroup('down','group1','asia','assssi.jpg',1)" onMouseOver="MM_nbGroup('over','asia','assia.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="asia.png" alt="Asia" name="asia" width="64" height="46" border="0" onLoad="" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="antartidaa.html" target="_top" onClick="MM_nbGroup('down','group1','antartida','antartiiiii.jpeg',1)" onMouseOver="MM_nbGroup('over','antartida','antartidaaaaaa.png','',1)" onMouseOut="MM_nbGroup('out')"><img src="antartida.png" alt="antartida" name="antartida" width="63" height="53" border="0" onLoad="" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="americaa.html" target="_top" onclick="MM_nbGroup('down','group1','america','americaaaa.jpg',1)" onmouseover="MM_nbGroup('over','america','americaaa.jpg','ameee.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="america.png" alt="america" name="america" width="66" height="49" border="0" onload="" /></a></td>
+  </tr>
+</table>
+</body>
+</html>
